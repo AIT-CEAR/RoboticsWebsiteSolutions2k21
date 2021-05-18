@@ -174,17 +174,16 @@
                    <span><i>3</i>Days non-stop action</span>
                </div>
                <div class="right">
-
-                   <h1>Day 1</h1>
-                   <p>A Monstrous start with effort draining team exercises...</p>
-                   <div class="event-grp">
-                       <button>Quizzerati</button>
-                       <button>HouseMaker</button>
-                   </div>
-                   <div class="slide-indicator">
-                       <span active="1"></span>
-                       <span active="0"></span>
-                       <span active="0"></span>
+                        <h1 id="event_day_span">Day 1</h1>
+                        <p id="event_day_para">A Monstrous start with effort draining team exercises...</p>
+                        <div class="event-grp">
+                            <a href="/events.html" target="_blank">Quizzerati</a>
+                            <a href="/events.html" target="_blank">HouseMaker</a>
+                        </div>
+                   <div class="slide-indicator" active="0">
+                       <span onclick="event_function(0)"></span>
+                       <span onclick="event_function(1)"></span>
+                       <span onclick="event_function(2)"></span>
                    </div>
                    <div class="small-screen-road">
                        <div class="f1-car-small"></div>
@@ -308,6 +307,14 @@
                 </div>
             </div>
        </section>
+
+       <div class="modal-wrapper">
+        <div class="modal">
+            <h2 id="modal-heading">Heading Goes Here</h2>
+            <p id="modal-data"></p>
+            <button id="modal-close">Close</button>
+        </div>
+       </div>
         
        
        
@@ -338,6 +345,7 @@
        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/MotionPathPlugin.min.js"></script>
        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
        <script src="console.js"></script>
+       <script defer src="navbar.js"></script>
        <script defer src="index.js"></script>
 
 </body>

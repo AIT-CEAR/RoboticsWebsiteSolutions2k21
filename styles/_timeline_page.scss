@@ -77,11 +77,17 @@ div.timeline-info>div.left>h1{
     font-size:6em;
     margin:0px;
     margin-bottom:0.3em;
+    @media only screen and (max-width:1046px){
+        font-size:5em;
+    }
 }
 div.timeline-info>div.left>span{
     display:block;
     margin-bottom:0.5em;
     font-size:2em;
+    @media only screen and (max-width:1046px){
+        font-size:1.6em;
+    }
 }
 div.timeline-info>div.left>span>i{
     font-size:1.5em;
@@ -144,17 +150,29 @@ div.timeline-info>div.right>div.event-grp{
     }
 }
 
-div.timeline-info>div.right>div.event-grp>button{
+div.timeline-info>div.right>div.event-grp>a{
     border:0px solid black;
+    text-decoration: none;
+    color:black;
     box-sizing: border-box;
     background-color:white;
     font-family:variables.$puritan_font;
     font-weight:bold;
-    font-size:1.5em;
+    font-size:1.2em;
     padding:0.3em 0.5em;
     display:inline-block;
     margin-right:0.5em;
     border-radius:0.1em;
+    opacity:0;
+    animation:scale-out 0.5s ease-out 1 both;
+    @keyframes scale-out {
+        from{
+            opacity:0;
+        }
+        to{
+            opacity:1;
+        }
+    }
     @media only screen and (max-width:900px){
         margin-right:0.5em;
         border:2px solid black;
@@ -171,8 +189,16 @@ div.timeline-info>div.right>div.slide-indicator{
         border-radius:50%;
         margin:0px 0.5em;
         box-sizing: border-box;
+        cursor:pointer;
+        transition:background-color 0.3s ease-out;
     }
-    &>span[active="1"]{
+    &[active="0"]>span:first-child{
+        background-color:variables.$primary_color;
+    }
+    &[active="1"]>span:nth-child(2){
+        background-color:variables.$primary_color;
+    }
+    &[active="2"]>span:nth-child(3){
         background-color:variables.$primary_color;
     }
     @media only screen and (max-width:900px){
