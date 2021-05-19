@@ -1,20 +1,47 @@
-
-
-const setUpNav = ()=>{
-    let nav_element = document.querySelector('nav');
-    let burger = nav_element.children[2];
-    burger.onclick = ()=>{
-        let enabled_status = nav_element.getAttribute('enabled');
-        if(enabled_status == 0){
-            nav_element.setAttribute('enabled','1');
-        }
-        else{
-            nav_element.setAttribute('enabled', '0');
-        }
+const DAYS_INFO = [
+    {
+        dayIndex : 0,
+        dayPara : 'A Monstrous start with effort draining team exercises...',
+        dayEvents : ['HomeMaker-1' , 'SolidWorks-1']
+    },
+    {
+        dayIndex : 1,
+        dayPara : 'Keep your face always towards the goal and victory will follow you...',
+        dayEvents : ['HomeMaker-2','Scintilla-1']
+    },
+    {
+        dayIndex : 2,
+        dayPara : 'One set from the victory you aspire and the rewards you desire...',
+        dayEvents : ['Quizotics','Scintilla-2','SolidWorks-2']
     }
+]
+
+const setUpEventsDesc = ()=>{
+    let event_day_span = document.getElementById('event_day_span');
+    let events_below_grid = document.querySelector('div.event-grp');
+    let event_day_para = document.getElementById('event_day_para');
+    let event_day_slider = document.querySelector('div.slide-indicator');
+   
+    let set_up_event = (dayIndex)=>{
+        console.log(dayIndex);
+        event_day_span.innerText = `Day ${dayIndex + 1}`;
+        event_day_para.innerText = DAYS_INFO[dayIndex].dayPara;
+        let html = '';
+        DAYS_INFO[dayIndex].dayEvents.forEach((element)=>{
+            html += `<a href="/events.html" target="_blank">${element}</a>`;
+        })
+        event_day_slider.setAttribute('active',dayIndex);
+        events_below_grid.innerHTML = html;
+    }
+    return set_up_event;
 }
 
-setUpNav();
+let event_function = setUpEventsDesc();
+let events_below_grid = document.querySelector('div.slide-indicator');
+event_function(0);
+
+
+
 
 class MySwiper{
     constructor(parent_element , left_btn , right_btn){
@@ -303,14 +330,14 @@ class RegistrationData{
            else if(status.status  === true){
                console.log(status.data);
                let data = status.data;
+               this.next_button.innerText = 'Loading ...';
+               this.next_button.disabled = 'true';
                writeUserData(data).then(()=>{
-                   
-                let alert = window.confirm('registration complete');
-                if(alert){
-                    location.reload();
-                }
-
-                });
+                    newModal.openModal('Yay!!! Registration Complete',`Congrats <i>${this.form.teamName}</i>, <br/>You are successfully registered for ${this.EVENT_INFO[this.form.eventIndex].event}<br/>You will receive a mail including further instructions.`);
+                    this.clearForm();
+                    this.next_button.innerText = 'Next';
+                    this.next_button.removeAttribute('disabled');
+            });
            }
            return;
        }
@@ -338,6 +365,27 @@ class RegistrationData{
             this.member_grid_empty = 1;
             this.removeErrorInField(this.team_member_field,3);
        }
+   }
+   clearForm = ()=>{
+        this.form = {
+            teamName : '',
+            eventIndex : -1,
+            teamLeader : '',
+            teamMembers : [],
+            email:'',
+            phoneNo:''
+        };
+
+        this.team_leader.value = '';
+        this.email_field.value = '';
+        this.phoneNo_field.value = '';
+        this.member_grid_empty = 1;
+        this.members_grid.innerHTML = '';
+        this.removeMemberUpdate();
+        this.team_name.value = '';
+        this.event_grid.setAttribute('selected','-1');
+        this.set_current_page_index(0);
+
    }
 
    addMemberField = (name , team_strength , check)=>{
@@ -414,6 +462,7 @@ class RegistrationData{
            if(this.isValidName(this.team_member_field.value)){
                this.removeErrorInField(this.team_member_field , 3);
                this.addMemberField(this.team_member_field.value , this.EVENT_INFO[this.form.eventIndex] ? this.EVENT_INFO[this.form.eventIndex].maxMembers : -1, this.form.teamLeader.length);
+               this.team_member_field.value = '';
            }
            else{
                this.errorInField(this.team_member_field , "Names don't have numbers or special chars" , 3);
@@ -493,3 +542,35 @@ showEvents = ()=>{
 closeEvents = ()=>{
     events_page.classList.remove('visible');
 }
+
+
+class ModalAlert{
+    constructor(modal_wrapper , close_btn , data_field , heading_field){
+        this.modal_wrapper = document.querySelector(modal_wrapper);
+        this.close_btn = document.querySelector(close_btn);
+        this.data_field = document.querySelector(data_field);
+        this.heading_field = document.querySelector(heading_field);
+        this.openState = 0;
+    }
+    openModal = (heading , message)=>{
+        this.heading_field.innerHTML = heading;
+        this.data_field.innerHTML = message;
+        this.modal_wrapper.classList.add('visible');
+        this.openState = 1;
+    }
+    init = ()=>{
+        this.close_btn.addEventListener('click' , ()=>{
+            this.modal_wrapper.style.opacity = 0;
+            setTimeout(()=>{
+                this.modal_wrapper.classList.remove('visible');
+            },400)
+            setTimeout(() => {
+                this.modal_wrapper.opacity = 1; 
+            }, 800);
+            this.openState = 0;
+        });
+    }
+}
+
+let newModal = new ModalAlert('div.modal-wrapper','#modal-close','#modal-data','#modal-heading');
+newModal.init();

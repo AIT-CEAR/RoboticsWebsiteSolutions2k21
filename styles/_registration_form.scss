@@ -320,6 +320,10 @@ section.reg-page-wrapper>div.reg-page>div.reg-form-outer{
                     padding-right:2em;
                 }
             }
+            &[disabled]{
+                background-color:gray;
+                color:white;
+            }
         }
     }
 }

@@ -7,6 +7,8 @@
 @use './nav' as nav;
 @use './main_page' as main_page;
 @use './registration_form' as registration_form;
+@use './modal_section' as modal_section;
+@use './events_new_page' as events_new_page;
 
 
 $red : green;
@@ -17,4 +19,8 @@ html,body
     margin: 0px;
     padding: 0px;
     overflow-x: hidden; 
+}
+
+button:focus{
+    outline:none;
 }
