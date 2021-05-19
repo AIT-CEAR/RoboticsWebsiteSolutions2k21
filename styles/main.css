@@ -190,7 +190,7 @@ section.events-page div.event:hover {
   transform: rotateZ(0deg);
 }
 
-section.events-page div.event > i {
+section.events-page div.event > a {
   position: absolute;
   top: 1em;
   right: 1em;
@@ -208,7 +208,7 @@ section.events-page div.event > i {
   cursor: pointer;
 }
 @media only screen and (max-width: 620px) {
-  section.events-page div.event > i {
+  section.events-page div.event > a {
     display: inline-block;
     position: static;
     margin-left: 0.5em;
@@ -1375,7 +1375,6 @@ nav {
   nav[enabled="1"] > ul {
     transform: translateX(0%);
     opacity: 1;
-    z-index: 2;
   }
 }
 @media only screen and (max-width: 700px) {
@@ -1384,7 +1383,7 @@ nav {
   }
 }
 
-nav > a.main-logo {
+nav > div.main-logo {
   height: 7em;
   width: 7em;
   background-size: contain;
@@ -1393,7 +1392,7 @@ nav > a.main-logo {
   background-repeat: no-repeat;
 }
 @media only screen and (max-width: 700px) {
-  nav > a.main-logo {
+  nav > div.main-logo {
     width: 3em;
     height: 3em;
   }
