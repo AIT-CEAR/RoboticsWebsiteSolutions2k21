@@ -6,7 +6,25 @@
   padding: 0;
   box-sizing: border-box;
 }
+.section-title {
+  text-align: center;
 
+}
+.section-title h2 {
+  font-size: 40px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  font-family: 'puritan';
+  padding: 8px 20px;
+  line-height: 1;
+  margin: 5%;
+  display: inline-block;
+  text-transform: uppercase;
+  border-radius: 50px;
+  background: white;
+  color: #40857f;
+  border: 2.5px solid #8dfaf1;
+}
 .container {
   display: flex;
   flex-direction: row;
@@ -66,8 +84,6 @@
   font-style: normal;
   font-weight: bold;
   font-size: 24px;
-  line-height: 250%;
-
   color: #000000;
 }
 
@@ -75,9 +91,7 @@
   padding: 2%;
 }
 
-.gap {
-  width: 5%;
-}
+
 .members {
   margin: 2%;
   width: fit-content;
@@ -90,7 +104,7 @@
   font-style: normal;
   font-weight: bold;
   font-size: 24px;
-  line-height: 250%;
+ 
 
   color: #ffffff;
 }
