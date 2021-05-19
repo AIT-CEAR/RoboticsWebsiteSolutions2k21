@@ -1,13 +1,13 @@
-function sendmail(user_team_name,user_email,user_unique_id,event){
+function sendmaila(user_team_name,user_email,user_unique_id,event){
     var templateParams = {
                user_name: user_team_name,
                user_email: user_email,                    
-               user_message:user_unique_id,
+               user_unique_id:user_unique_id,
                event:event
            };
            console.log(templateParams);
            emailjs.init('user_maUcPFZUuPF2U5sfV4tlb');
-           emailjs.send('service_wa74e0i', 'template_po6x91b', templateParams)
+           emailjs.send('service_wa74e0i', 'template_6u0p9an', templateParams)
                .then(function(response) {
                   console.log('SUCCESS!', response.status, response.text); 
                   alert("Query Successfully Submitted")                          
@@ -151,7 +151,7 @@ let id = setInterval(() => {
 
 let database = firebase.database();
 
-async function writeUserData({teamId, teamName, eventIndex, teamLeader , teamMembers , email , phoneNo}) {
+async function writeUserData({ teamName, eventIndex, teamLeader , teamMembers , email , phoneNo} , teamId) {
     await firebase.database().ref('users/' + teamId).set({
       teamLeader : teamLeader,
       email: email,
@@ -350,11 +350,12 @@ class RegistrationData{
            else if(status.status  === true){
                console.log(status.data);
                let data = status.data;
-               data.teamId = `${teamName}${teamLeader}${Math.floor(Math.random()*50000)}`;
+               let teamId = `${this.form.teamName}${this.form.teamLeader}${Math.floor(Math.random()*50000)}`;
                this.next_button.innerText = 'Loading ...';
                this.next_button.disabled = 'true';
-               writeUserData(data).then(()=>{
+               writeUserData(data,teamId).then(()=>{
                     newModal.openModal('Yay!!! Registration Complete',`Congrats <i>${this.form.teamName}</i>, <br/>You are successfully registered for ${this.EVENT_INFO[this.form.eventIndex].event}<br/>You will receive a mail including further instructions.`);
+                   sendmaila(this.form.teamName,this.form.email,teamId,this.EVENT_INFO[this.form.eventIndex].event);
                     this.clearForm();
                     this.next_button.innerText = 'Next';
                     this.next_button.removeAttribute('disabled');
