@@ -163,7 +163,7 @@ section.events-page div.event:nth-child(3n - 1){
 section.events-page div.event:hover{
     transform:rotateZ(0deg);
 }
-section.events-page div.event>i{
+section.events-page div.event>a{
     position:absolute;
     top:1em;
     right:1em;
@@ -179,8 +179,7 @@ section.events-page div.event>i{
     box-shadow: 0px 4px 30px 20px #00000040;
     transition:transform 0.2s ease-out;
     cursor:pointer;
-
-  
+      
 
     @media only screen and (max-width:620px){
         display:inline-block;        

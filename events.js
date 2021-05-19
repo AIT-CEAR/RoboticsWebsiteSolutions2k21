@@ -39,6 +39,8 @@ const EVENTS_DATA = [
     <li>n case of any on the spot discrepancy, the decision of the organizers will be considered final.</li>
    
 </ul>
+<span>Prizes</span>
+<p>Prizes worth <b>5k+</b> and <b>tons of goodies</b>.</p>
 <span><a href="https://drive.google.com/drive/folders/1aMUyMKM8FzTGlHMBdFzfAzgP_rGjppx2" style="text-decoration:none; color:white">Download PDF/Doc </a></span>
         `
     },
@@ -86,6 +88,8 @@ const EVENTS_DATA = [
                 <li>All the 4 team members must be from the same college/school.</li>
                 <li>In case of any on the spot discrepancy, the decision of the organizers would be considered final.</li>
             </ul>
+            <span>Prizes</span>
+            <p>Prizes worth <b>5k+</b> and <b>tons of goodies</b>.</p>
             <span><a href="https://drive.google.com/drive/folders/11MuaO60J5CUFnMSA-OTGa_9Sj03Fr7nN" style="text-decoration:none; color:white">Download PDF/Doc </a></span>
         `
     },
@@ -136,6 +140,8 @@ const EVENTS_DATA = [
             <li>
             In case of any on the spot discrepancy, the decision of the organizers will be considered final.</li>
         </ul>
+        <span>Prizes</span>
+        <p>Prizes worth <b>5k+</b> and <b>tons of goodies</b>.</p>
         <span ><a href="https://drive.google.com/drive/folders/11QIq1_r15rpd6zLww-_1-67Mr0Y-piiH"
         style="text-decoration:none; color:white">Download PDF/Doc </a></span>
         `
@@ -168,6 +174,8 @@ const EVENTS_DATA = [
         <li>Number of models they can make in given time.</li>
         </ul>
         <p>Participants are given a google form where they are required to upload all the 3d models they make.</p>
+        <span>Prizes</span>
+        <p>Prizes worth <b>5k+</b> and <b>tons of goodies</b>.</p>
         <span ><a href="https://drive.google.com/drive/folders/11QIq1_r15rpd6zLww-_1-67Mr0Y-piiH" style="text-decoration:none; color:white">Download PDF/Doc  </a></span>
         `
     }

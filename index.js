@@ -202,7 +202,7 @@ class RegistrationData{
             {
                 event : 'Quizotics',
                 desc : 'Quizzes were never more exciting , answer while playing a timed game the first one to give the correct answer takes the prize.',
-                maxMembers : 1
+                maxMembers : 0
             },
             {
                 event : 'Scintilla',
