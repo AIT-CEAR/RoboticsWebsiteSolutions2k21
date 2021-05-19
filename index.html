@@ -230,17 +230,17 @@
             <div class="contact-div">
                 <div class="bg"></div>
                 <h2>Contact Us</h2> 
-                <input class="input name" placeholder="Name goes here"></input>
-                <input class="input email" placeholder="Email goes here"></input>
+                <input class="input name" id="user_name" placeholder="Name goes here"></input>
+                <input class="input email" id="user_email" placeholder="Email goes here"></input>
                 <div class="seperator">
                     <span></span>
                     <span></span>
                     <span></span>
                 </div>
-                <textarea placeholder="Your Issue goes here"></textarea>
-                <button>Submit</button>
+                <textarea placeholder="Your Issue goes here" id="user_message"></textarea>
+                <button type="submit" id="queryburron" onclick="sendmail()">Submit</button>
             </div>
-           </div>
+        </div>
        </section>
 
        <section class="reg-page-wrapper" >
@@ -347,6 +347,25 @@
        <script src="console.js"></script>
        <script defer src="navbar.js"></script>
        <script defer src="index.js"></script>
-
-</body>
+       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+        <script>
+            function sendmail(){
+             var templateParams = {
+                        user_name: document.getElementById('user_name').value,
+                        user_email: document.getElementById('user_email').value,                        
+                        user_message: document.getElementById('user_message').value
+                    };
+                    console.log(templateParams);
+                    emailjs.init('user_maUcPFZUuPF2U5sfV4tlb');
+                    emailjs.send('service_wa74e0i', 'template_po6x91b', templateParams)
+                        .then(function(response) {
+                           console.log('SUCCESS!', response.status, response.text); 
+                           alert("Query Successfully Submitted")                          
+                        location.reload();
+                        }, function(error) {
+                           console.log('FAILED...', error);
+                        });
+                    }
+        </script>
+    </body>
 </html>
