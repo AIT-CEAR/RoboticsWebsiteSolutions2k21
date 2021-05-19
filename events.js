@@ -94,7 +94,7 @@ const EVENTS_DATA = [
         event:2,
         date:'<i></i>24-25th May',
         teamSize : '<i></i>1 Member', 
-        name:'HouseMaker',
+        name:'HomeMaker',
         contentHTML : `
         <span>Rooms</span>  
         <ul>

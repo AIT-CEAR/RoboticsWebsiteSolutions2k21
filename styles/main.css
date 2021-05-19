@@ -1375,6 +1375,7 @@ nav {
   nav[enabled="1"] > ul {
     transform: translateX(0%);
     opacity: 1;
+    z-index: 2;
   }
 }
 @media only screen and (max-width: 700px) {
@@ -1383,7 +1384,7 @@ nav {
   }
 }
 
-nav > div.main-logo {
+nav > a.main-logo {
   height: 7em;
   width: 7em;
   background-size: contain;
@@ -1392,7 +1393,7 @@ nav > div.main-logo {
   background-repeat: no-repeat;
 }
 @media only screen and (max-width: 700px) {
-  nav > div.main-logo {
+  nav > a.main-logo {
     width: 3em;
     height: 3em;
   }
