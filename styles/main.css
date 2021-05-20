@@ -496,9 +496,10 @@ section.prizes-page span.prizes-major-tagline {
   }
 }
 
-section.prizes-page div.know-more {
+section.prizes-page a.know-more {
   cursor: pointer;
   position: absolute;
+  text-decoration: none;
   font-family: "puritan", sans-serif;
   font-size: 2.5em;
   font-weight: bold;
@@ -512,25 +513,25 @@ section.prizes-page div.know-more {
   transition: transform 0.2s ease-in;
   border: 20px solid white;
 }
-section.prizes-page div.know-more:hover {
+section.prizes-page a.know-more:hover {
   transform: translate(-50%, -50%) scale(1.1);
 }
-section.prizes-page div.know-more > i {
+section.prizes-page a.know-more > i {
   font-style: normal;
   display: block;
 }
 @media only screen and (max-width: 1380px) {
-  section.prizes-page div.know-more {
+  section.prizes-page a.know-more {
     bottom: -1em;
   }
 }
 @media only screen and (max-width: 1120px) {
-  section.prizes-page div.know-more {
+  section.prizes-page a.know-more {
     font-size: 2em;
   }
 }
 @media only screen and (max-width: 970px) {
-  section.prizes-page div.know-more {
+  section.prizes-page a.know-more {
     position: relative;
     align-self: flex-start;
     border-radius: 0px;
@@ -545,10 +546,10 @@ section.prizes-page div.know-more > i {
     align-self: center;
     margin-top: 2em;
   }
-  section.prizes-page div.know-more:hover {
+  section.prizes-page a.know-more:hover {
     transform: translateY(-2px);
   }
-  section.prizes-page div.know-more > i {
+  section.prizes-page a.know-more > i {
     display: inline-block;
   }
 }
@@ -779,7 +780,7 @@ section.footer-page > div.footer-text > div.footer-comms {
   margin-bottom: 3em;
   margin-left: 3.4em;
 }
-section.footer-page > div.footer-text > div.footer-comms > span {
+section.footer-page > div.footer-text > div.footer-comms > a {
   width: 4em;
   height: 4em;
   background-color: black;
@@ -788,13 +789,13 @@ section.footer-page > div.footer-text > div.footer-comms > span {
   background-size: contain;
   background-position: center;
 }
-section.footer-page > div.footer-text > div.footer-comms > span:nth-child(1) {
+section.footer-page > div.footer-text > div.footer-comms > a:nth-child(1) {
   background-image: url("../images/facebook.svg");
 }
-section.footer-page > div.footer-text > div.footer-comms > span:nth-child(2) {
+section.footer-page > div.footer-text > div.footer-comms > a:nth-child(2) {
   background-image: url("../images/instagram.svg");
 }
-section.footer-page > div.footer-text > div.footer-comms > span:nth-child(3) {
+section.footer-page > div.footer-text > div.footer-comms > a:nth-child(3) {
   background-image: url("../images/mail.svg");
 }
 @media only screen and (max-width: 970px) {
