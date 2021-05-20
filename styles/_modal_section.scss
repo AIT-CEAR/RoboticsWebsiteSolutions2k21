@@ -32,6 +32,9 @@ div.modal-wrapper div.modal{
     flex-flow:column;
     justify-content:center;
     animation:modal-show 0.3s ease-in;
+    @media screen and (max-width:400px){
+        width:350px;
+    }
 
     & i{
         font-style: normal;
