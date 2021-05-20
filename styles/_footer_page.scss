@@ -202,7 +202,7 @@ section.footer-page>div.footer-text>div.footer-comms{
     display:flex;
     margin-bottom:3em;
     margin-left:3.4em;
-    &>span{
+    &>a{
         width:4em;
         height:4em;
         background-color:black;
@@ -211,13 +211,13 @@ section.footer-page>div.footer-text>div.footer-comms{
         background-size:contain;
         background-position:center;
     }
-    &>span:nth-child(1){
+    &>a:nth-child(1){
         background-image:url('../images/facebook.svg');
     }
-    &>span:nth-child(2){
+    &>a:nth-child(2){
         background-image:url('../images/instagram.svg');
     }
-    &>span:nth-child(3){
+    &>a:nth-child(3){
         background-image:url('../images/mail.svg');
     }
     

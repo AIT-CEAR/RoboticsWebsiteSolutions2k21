@@ -48,7 +48,7 @@ const setUpEventsDesc = ()=>{
         event_day_para.innerText = DAYS_INFO[dayIndex].dayPara;
         let html = '';
         DAYS_INFO[dayIndex].dayEvents.forEach((element)=>{
-            html += `<a href="/events.html" target="_blank">${element}</a>`;
+            html += `<a href="./events.html" target="_blank">${element}</a>`;
         })
         event_day_slider.setAttribute('active',dayIndex);
         events_below_grid.innerHTML = html;

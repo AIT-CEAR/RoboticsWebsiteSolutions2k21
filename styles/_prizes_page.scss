@@ -153,9 +153,10 @@ section.prizes-page span.prizes-major-tagline{
         display:none;
     }
 }
-section.prizes-page div.know-more{
+section.prizes-page a.know-more{
     cursor:pointer; 
     position:absolute;
+    text-decoration: none;
     font-family:variables.$puritan_font;
     font-size:2.5em;
     font-weight:bold;
