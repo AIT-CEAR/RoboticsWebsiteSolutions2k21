@@ -52,9 +52,7 @@ const EVENTS_DATA = [
         contentHTML : `
             <span>Themes</span>  
             <ul>
-                <li>Defence Forces</li> 
-                <li>Medical and HealthCare Sector</li> 
-                <li>Marine Life ecosystem</li> 
+                <li>Themes will be released on 24th May at 12:00AM.</li> 
             </ul>
             <span>25th May - Prelim / Qualifier Round</span>
             <p>Teams would be required to submit an abstract of selected theme explaining the problem statement and the key concepts guiding their idea in any of the following formats: PPT/text document/audio/video within stipulated time. Abstract should be submitted at the mail id provided on the website. In case of audio/video file, it should be uploaded on google drive and drive link should be shared in the mail sent by the participants.</p>
