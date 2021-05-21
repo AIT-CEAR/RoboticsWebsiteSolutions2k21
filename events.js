@@ -6,37 +6,35 @@ const EVENTS_DATA = [
         name:'Quizotics',
         contentHTML : `
         <span>Time Limit: </span> 
-        <p> Each question will have time limit of 10-15 seconds according to the difficulty level of questions.
+        <p> No time limit.
         </p>   
         <span>Question type:</span>
-        <p>Question type: You will be given 25 questions and each question will have certain time limits. The questions will be multiple choice types.
+        <p>Question type: Multiple Choice Question
         </p>
         <span>Description</span>
-        <p>Participants will be provided with the option to choose any one of the five given topics:
+        <p> Participants will be asked questions related to the topic given below:
         </p>
         <ul>
         <li>Movie robots quiz</li> 
         <li>AI ML</li> 
         <li>IoT and embedded systems</li> 
         <li>Sensors</li>
-        <li>Miscellaneous (25 questions from all above topics)
-        </li>
     </ul>
-    <p>Participants will have to choose the topic during registration process. The quiz link of the topic they choose will be mailed when the event starts and they have to finish the quiz within 15 minutes. During registration participants have to enter their user name as FullName_School/CollegeName and the same user name they have to enter at the time of giving quiz.
-    </p>
+    <p> You will be provided unique id as a username. Your id and the quiz link will be mailed to you 15 min before the event. 
+    You are advised  not to share your unique id with anyone.</p>
     <span>
     Result: </span>
-    <p>It will be based on how fast and accurate participants answer the questions. 
+    <p>It will be based on your score and if scores are equal then minimum time will be considered.  
     </p>
     <span>Rules: </span>
     <ul>
-    <li>Participants have to finish the quiz within 15 minutes after the quiz link mailed.
-    </li> 
-    <li>The username will be FullName_School/collegeName. You have to write the same during registration and at the time of quiz.
+    <li>The username will be provided by your event head. You have to write the same  at the time of quiz.
     </li> 
     <li>The decision of the judges shall be final and binding.
     </li> 
-    <li>n case of any on the spot discrepancy, the decision of the organizers will be considered final.</li>
+    <li>In case of any on the spot discrepancy, the decision of the organizers will be considered final.
+    </li> 
+    <li>Your worst case i.e. the attempt having minimum score and maximum time will be considered .</li>
    
 </ul>
 <span>Prizes</span>
