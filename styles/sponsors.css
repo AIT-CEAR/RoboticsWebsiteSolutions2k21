@@ -1,0 +1,59 @@
+.spon {
+  margin-top: 90px;
+  background: #ffff;
+  font-family: Poppins;
+}
+
+.spon .titlepage {
+  text-align: center;
+}
+
+.spon .titlepage h2 {
+  padding-bottom: 20px;
+}
+
+.spon .titlepage p {
+  color: #090808;
+}
+
+.spon .spon-box h3 {
+  padding: 20px 0px 20px 0px;
+  font-size: 20px;
+  line-height: 25px;
+  color: #090808;
+  display: block;
+  font-weight: 500;
+}
+
+.spon .spon-box {
+  text-align: center;
+  background-color: transparent;
+  border-radius: 20px;
+  height: 450px;
+  padding: 40px 20px 20px 20px;
+  transition: ease-in all 0.5s;
+  margin-bottom: 30px;
+  box-shadow: #ddd 0px 0px 10px;
+}
+
+.spon .spon-box p {
+  font-size: 14px;
+  line-height: 24px;
+  color: #090808;
+}
+
+.spon .spon-box:hover {
+  transition: ease-in all 0.1s;
+  transform: scale(1.01);
+}
+.social-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+@media screen and (max-width: 517px) {
+  .spon .spon-box {
+    height: 510px;
+  }
+}
