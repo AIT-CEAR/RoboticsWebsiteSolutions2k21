@@ -8,7 +8,7 @@ async function sendmaila(user_team_name,user_email,user_unique_id,event){
            };
            console.log(templateParams);
            emailjs.init('user_Bxu8PiUUYsMcoDpwIZglq');
-           let response = await emailjs.send('service_wa74e0i', 'template_tmlqgrn', templateParams)
+           let response = await emailjs.send('service_qpe5jka', 'template_tmlqgrn', templateParams)
            newModal.openModal('Yay!!! Registration Complete',`Congrats <i>${user_team_name}</i>, <br/>You are successfully registered for ${event}<br/>You will receive a mail including further instructions.`);
            console.log('SUCCESS!', response.status, response.text); 
     }
